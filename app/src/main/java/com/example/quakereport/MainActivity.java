@@ -1,18 +1,11 @@
 package com.example.quakereport;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
-import android.content.Context;
-import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,7 +14,7 @@ import java.util.List;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=20";
+    private static final String USGS_REQUEST_URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=6&limit=15";
     public static final String LOG_TAG = MainActivity.class.getName();
     private static final int EARTHQUAKE_LOADER_ID = 1;
     private EarthquakeAdapter mAdapter;
